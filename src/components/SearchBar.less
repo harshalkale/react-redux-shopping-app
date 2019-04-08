@@ -1,0 +1,14 @@
+@import '../styles/variables.less';
+
+.SearchBar {
+  flex: 1;
+
+  @media @desktop {
+    flex-grow: unset;
+    flex-basis: @searchBoxMaxWidth
+  }
+
+  &-input {
+    flex-grow: 1;
+  }    
+}

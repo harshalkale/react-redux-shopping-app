@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "genderIds": [1, 3],
+    "brand": "Calvin Klien",
+    "name": "Solid White Shirt",
+    "availableQty": 10,
+    "images": {
+      "thumb": "https://via.placeholder.com/200x200",
+      "full": "https://via.placeholder.com/400x400"
+    },
+    "description": "This is a product."
+  },
+  {
+    "id": 2,
+    "genderIds": [1, 2],
+    "brand": "Puma",
+    "name": "Olive Green Backpack",
+    "availableQty": 10,
+    "images": {
+      "thumb": "https://via.placeholder.com/200x200",
+      "full": "https://via.placeholder.com/400x400"
+    },
+    "description": "This is a product."
+  },
+  {
+    "id": 3,
+    "genderIds": [1, 2, 3],
+    "brand": "Adidas",
+    "name": "Pureboost 19 Sneakers",
+    "availableQty": 10,
+    "images": {
+      "thumb": "https://via.placeholder.com/200x200",
+      "full": "https://via.placeholder.com/400x400"
+    },
+    "description": "This is a product."
+  },
+  {
+    "id": 4,
+    "genderIds": [2],
+    "brand": "Nike",
+    "name": "Pink Track Suit",
+    "availableQty": 10,
+    "images": {
+      "thumb": "https://via.placeholder.com/200x200",
+      "full": "https://via.placeholder.com/400x400"
+    },
+    "description": "This is a product."
+  },
+  {
+    "id": 5,
+    "genderIds": [1, 3],
+    "brand": "G.A.P",
+    "name": "Textured Jeans",
+    "availableQty": 10,
+    "images": {
+      "thumb": "https://via.placeholder.com/200x200",
+      "full": "https://via.placeholder.com/400x400"
+    },
+    "description": "This is a product."
+  },
+  {
+    "id": 6,
+    "genderIds": [2, 3],
+    "brand": "First Cry",
+    "name": "Baby wipes",
+    "availableQty": 10,
+    "images": {
+      "thumb": "https://via.placeholder.com/200x200",
+      "full": "https://via.placeholder.com/400x400"
+    },
+    "description": "This is a product."
+  }
+]

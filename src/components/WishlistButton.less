@@ -1,0 +1,18 @@
+@import '../styles/variables.less';
+
+.WishlistButton {
+  &-icon {
+    color: @darkBlue;
+    font-size: 24px;
+
+    &:hover {
+      color: lighten(@darkBlue, 5%);
+    }
+  }
+
+  &-badge {
+    position: absolute;
+    font-size: 10px;
+    transform: translate(-5px, -7px);
+  }
+}

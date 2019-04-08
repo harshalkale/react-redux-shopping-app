@@ -1,28 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Switch, Route } from 'react-router-dom';
+import { ConnectedRouter } from 'connected-react-router';
+
+import { history } from './store';
+import actions from './store/actions';
+import routes from './routes';
+
+import Loader from './components/Loader';
+
+import './App.less';
 
 class App extends Component {
+  componentWillMount() {
+    const {
+      actions: { initApp },
+    } = this.props;
+
+    initApp();
+  }
+
   render() {
+    const { isLoading } = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ConnectedRouter history={history}>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Switch>
+            {routes.map((routeProps, index) => (
+              <Route key={index} {...routeProps} />
+            ))}
+          </Switch>
+        )}
+      </ConnectedRouter>
     );
   }
 }
 
-export default App;
+const mapStateToProps = ({ global: { isLoading } }) => ({ isLoading });
+
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(actions, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

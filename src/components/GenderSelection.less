@@ -1,0 +1,55 @@
+@import '../styles/variables.less';
+
+.GenderSelection {
+  &-genderBlock {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    min-height: 200px;
+    box-sizing: border-box;
+
+    @media @desktop {
+      min-height: calc(100vh - (@headerHeight + @footerHeight));
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.blue {
+      background-color: @darkBlue;
+      color: @lightBlue;
+
+      &:hover {
+        background-color: lighten(@darkBlue, 5%);
+        color: lighten(@lightBlue, 5%);
+      }
+    }
+
+    &.pink {
+      background-color: @pink;
+      color: @purple;
+
+      &:hover {
+        background-color: darken(@pink, 5%);
+        color: darken(@purple, 5%);
+      }
+    }
+
+    &.yellow {
+      background-color: @yellow;
+      color: @black;
+
+      &:hover {
+        background-color: darken(@yellow, 5%);
+        color: darken(@black, 5%);
+      }
+    }
+  }
+
+  &-text {
+    flex: 1;
+    font-size: 40px;
+    text-align: center;
+  }
+}
